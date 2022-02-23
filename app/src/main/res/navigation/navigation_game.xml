@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_game"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="id.ac.ubaya.informatika.adv160419017week2.MainFragment"
+        android:label="Main Screen"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/actionToGameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="id.ac.ubaya.informatika.adv160419017week2.GameFragment"
+        android:label="Game Screen"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/actionToGameOver"
+            app:destination="@id/fragmentGameOver" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGameOver"
+        android:name="id.ac.ubaya.informatika.adv160419017week2.FragmentGameOver"
+        android:label="fragment_game_over"
+        tools:layout="@layout/fragment_game_over" >
+        <action
+            android:id="@+id/actionToMainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
