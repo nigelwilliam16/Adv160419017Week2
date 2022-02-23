@@ -28,7 +28,7 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         buttonStart.setOnClickListener{
-            val action = MainFragmentDirections.actionToGameFragment()
+            val action = MainFragmentDirections.actionToGameFragment(editName.text.toString())
             Navigation.findNavController(it).navigate(action)
         }
     }

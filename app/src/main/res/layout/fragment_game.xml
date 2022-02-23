@@ -10,7 +10,7 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/textViewTurn"
+        android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toEndOf="@+id/textViewNumber1"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTurn" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
     <TextView
         android:id="@+id/textViewNumber1"
@@ -54,7 +54,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTurn" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
     <TextView
         android:id="@+id/textView5"
@@ -67,7 +67,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textViewNumber2"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toEndOf="@+id/textViewNumber1"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTurn" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputAnswer"
@@ -78,9 +78,10 @@
         app:hintAnimationEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTurn">
+        app:layout_constraintTop_toBottomOf="@+id/textViewName">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editAnswer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>

@@ -28,8 +28,26 @@ class GameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val randomNumber1 = (0..50).random()
+        val randomNumber2 = (0..50).random()
+        val answer = randomNumber1 + randomNumber2
+
+        textViewNumber1.text = randomNumber1.toString()
+        textViewNumber2.text = randomNumber2.toString()
+        arguments?.let {
+            val playerName = GameFragmentArgs.fromBundle(requireArguments()).playerName
+            textViewName.text = "$playerName's Turn"
+        }
         buttonSumbitAnswer.setOnClickListener{
-            val action = GameFragmentDirections.actionToGameOver()
+            val answerInput = editAnswer.text.toString().toInt()
+            var score = 0
+
+            if(answerInput == answer)
+                score = 1
+            else
+                score = 0
+
+            val action = GameFragmentDirections.actionToGameOver(score)
             Navigation.findNavController(it).navigate(action)
         }
     }
